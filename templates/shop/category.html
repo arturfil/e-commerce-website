@@ -20,18 +20,18 @@
 
 {% block content %}
   {% if category %}
-    <div>
+    <div class="container">
       <div>
         <p><a href="{% url 'shop:allProductCategory' %}">Our Product Collection</a> | {{ category.name }} </p>
       </div>
     </div>
   {% endif %}
-  <div>
+  <div class="container">
   {% if category %}
     <img src="{{ category.image.url }}" alt={{category.name}}>
   </div>
   <br>
-  <div>
+  <div class="container">
     <h1>{{category.name}}</h1>
     <p>{{ category.description }}</p>
   </div>
@@ -41,7 +41,7 @@
     <p>This is our variety of our products</p>
   </div>
   {% endif %}
-  <div>
+  <div class="container">
     <div>
       {% for product in products %}
         <div>
