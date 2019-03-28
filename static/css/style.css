@@ -2,13 +2,18 @@
   color: #fff !important; }
 
 img {
-  width: 100%; }
+  width: 180px; 
+  height: 200px;
+}
 
 .logo {
   width: 80px; }
 
 .navbar {
   opacity: 0.9;
+  letter-spacing: .2em;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 .social a {
@@ -69,12 +74,33 @@ img {
 .listing-preview a {
   position: relative; }
 
-/* Added CSS */
+/* Category */
 
-img {
-  height: 400px;
-  width: 200px;
+.my_row_class {
+  paddint-top: 15px;
 }
+.my_row_class  .mx-auto {
+  color: #000;
+  font-size: 12px;
+}
+.my_row_class .mx-auto p {
+  color: black;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.my_image {
+  margin: 0 auto;
+  width: 100px;
+  height: auto;
+}
+
+.my_title {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
+
 
 
 @media (max-width: 991px) {

@@ -2,13 +2,18 @@
   color: #fff !important; }
 
 img {
-  width: 100%; }
+  width: 180px; 
+  height: 200px;
+}
 
 .logo {
   width: 80px; }
 
 .navbar {
   opacity: 0.9;
+  letter-spacing: .2em;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 .social a {
@@ -69,13 +74,91 @@ img {
 .listing-preview a {
   position: relative; }
 
-/* Added CSS */
+/* Category */
 
-img {
-  height: 400px;
-  width: 200px;
+.cat-banner {
+  border: solid 1px lightgrey;
+  padding: 20px;
 }
 
+.cat-banner img {
+  margin: 0 auto;
+}
+
+.my_row_class {
+  paddint-top: 15px;
+}
+.my_row_class  .mx-auto {
+  color: #000;
+  font-size: 12px;
+}
+.my_row_class .mx-auto p {
+  color: black;
+  text-decoration: none;
+}
+
+.my_image {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+}
+
+.my_title {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
+
+.my_image_padding {
+  padding-top: 5px;
+}
+
+.my_bottom_margin {
+  margin-bottom: 10px;
+}
+
+/* Card Classes */
+
+.card {
+  text-align: center;
+  margin: 0 auto;
+  box-shadow: 0px 20px 20px -6px rgb(147, 147, 147);
+}
+
+.card img {
+  margin: 0 auto;
+}
+
+.card h4 {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+
+/* My Product classes  */
+
+.my_prod_row_class {
+  padding: 15px 0;
+}
+
+.my_prod_row_class .mx_auto p {
+  color: #000;
+  font-size: 12px;
+}
+
+.my_prod_row_class .mx_auto p a {
+  color: #000;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.breadcrum {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
 
 @media (max-width: 991px) {
   #showcase {

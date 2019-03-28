@@ -20,36 +20,45 @@
 
 {% block content %}
   {% if category %}
-    <div class="container">
-      <div>
-        <p><a href="{% url 'shop:allProductCategory' %}">Our Product Collection</a> | {{ category.name }} </p>
+    <div class=" row my_row_class">
+      <div class="mx-auto">
+        <p class="breadcrum">
+          <a href="{% url 'shop:allProductCategory' %}">Home</a> |
+          <a href="{% url 'shop:allProductCategory' %}">Our Product Collection</a> | {{ category.name }} 
+        </p>
       </div>
     </div>
   {% endif %}
-  <div class="container">
   {% if category %}
-    <img src="{{ category.image.url }}" alt={{category.name}}>
+  <div class="container-fluid mx-auto cat-banner">
+    <div class="row">
+      <img class="my_image" src="{{ category.image.url }}" alt={{category.name}}>
+    </div>
   </div>
   <br>
   <div class="container">
-    <h1>{{category.name}}</h1>
-    <p>{{ category.description }}</p>
+    <h1 class="text-center my_title">{{category.name}}</h1>
+    <p class="text-justify">{{ category.description }}</p>
   </div>
   {% else %}
-  <div>
-    <h1>Our Product Collection</h1>
-    <p>This is our variety of our products</p>
+  <div class="container">
+    <h1 class="my_title text-center">Our Product Collection</h1>
+    <p class="text-justify">This is our variety of our products</p>
   </div>
   {% endif %}
   <div class="container">
-    <div>
+    <div class="row mx-auto">
       {% for product in products %}
-        <div>
+        <div class="my_bottom_margin col-9 col-sm-12 col-md-4 col-lg-4">
           <div>
-            <a href=""><img src="{{ product.photo_main.url }}" alt="{{product.name}}"></a>
-            <div>
-              <h4>{{product.name}}</h4>
-              <p>${{product.price}} </p>
+            <div class="card" style="width: 18rem;">
+              <img src="{{ product.photo_main.url }}" alt="{{product.name}}">
+              <div class="card-body">
+                <h4>{{product.name}}</h4>
+                <p class="card-text">
+                  ${{product.price}}
+                </p>
+              </div>
             </div>
           </div>
         </div>

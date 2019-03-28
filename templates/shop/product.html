@@ -7,7 +7,7 @@
 {% block content %}
   <div class="container">
     <div>
-      <p>
+      <p class="mx-auto breadcrum">
         <a href="{% url 'shop:allProductCategory' %}">Home</a> | 
         <a href="{{ product.category.get_url">
           {{product.category}} | {{product.name}}
