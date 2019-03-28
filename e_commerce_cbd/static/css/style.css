@@ -1,79 +1,3 @@
-.btn-secondary {
-  color: #fff !important; }
-
-img {
-  width: 180px; 
-  height: 200px;
-}
-
-.logo {
-  width: 80px; }
-
-.navbar {
-  opacity: 0.9;
-  letter-spacing: .2em;
-  font-size: 14px;
-  text-transform: uppercase;
-}
-
-.social a {
-  margin-right: 0.4rem; }
-
-#showcase {
-  background: url(../img/showcase.jpg) no-repeat top center fixed/cover;
-  position: relative;
-  min-height: 650px;
-  color: #fff;
-  padding-top: 6rem; }
-  #showcase .home-search {
-    min-height: 400px;
-    position: relative;
-    border-radius: 5px; }
-  #showcase .overlay {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-height: 400px;
-    width: 100%;
-    background: rgba(51, 51, 51, 0.8); }
-
-#services {
-  background: url(../img/building.jpg) no-repeat top center fixed/cover;
-  min-height: 300px;
-  position: relative;
-  overflow: hidden; }
-  #services::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-height: 100%;
-    width: 100%;
-    background: rgba(32, 134, 107, 0.8); }
-
-#showcase-inner {
-  background: url(../img/building.jpg) no-repeat top center fixed/cover;
-  position: relative;
-  overflow: hidden;
-  min-height: 200px; }
-  #showcase-inner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-height: 100%;
-    width: 100%;
-    background: rgba(32, 134, 107, 0.8); }
-  #showcase-inner.showcase-search {
-    min-height: 270px; }
-
-#work {
-  padding: 6rem 0; }
-
-.listing-preview a {
-  position: relative; }
-
 /* Category */
 
 .cat-banner {
@@ -121,8 +45,8 @@ img {
 
 .card {
   text-align: center;
-  margin: 0 auto;
-  box-shadow: 0px 20px 20px -6px rgb(147, 147, 147);
+  margin: 10px auto;
+  box-shadow: 0px 20px 20px -12px rgb(147, 147, 147);
 }
 
 .card img {
@@ -158,6 +82,23 @@ img {
   font-size: 18px;
   letter-spacing: 2px;
   font-weight: 400;
+}
+
+/* Product Details */
+
+.image-detail {
+  height: 500px;
+  width: 400px;
+}
+
+.prod-desc {
+  text-transform: uppercase;
+  text-align: justify;
+  margin-top: 100px;
+}
+
+.link-cart {
+  color: rgb(0, 94, 255);
 }
 
 @media (max-width: 991px) {

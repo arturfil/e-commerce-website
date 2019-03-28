@@ -18,16 +18,9 @@ def allProductCategory(request, c_slug=None):
     products = Product.objects.all().filter(available=True)
   return render(request, 'shop/category.html',{'category':c_page,'products':products})
 
-def ProdCatDetail(request, c_slug, product_slug):
-  try:
-    product = Product.objects.get(category__slug = c_slug, slug=product_slug)
-  except Exception as e:
-    raise e
-  return render(request, 'shop/product.html',{'product':product})
-
 def ProductCategoryDetail(request, c_slug, product_slug):
   try:
-    product = Product.objects.get(category_slug=c_slug,slug=product_slug)
+    product = Product.objects.get(category__slug=c_slug, slug=product_slug)
   except Exception as e:
     raise e
-  return render(request, 'shop/product.html',{'product': product})
+  return render(request, 'shop/product.html', {'product':product})
