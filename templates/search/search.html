@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% loads staticfiles %}
+{% block metadescription %}
+  Check the variety of products, look for the one that suits you best
+{% endblock %}
+{% block title %}
+
+{% block conent %}
+  <div>
+    <a class="text-center my_search_text" href="">
+      Results:
+      <a href="">
+        {{ query }}
+      </a>
+    </a>
+  </div>
+  <div class="container">
+    <div class="row mx-auto">
+      {% for product in products.object_list %}
+      <div class="my_bottom_margin col-12 col-sm-12 col-md-6 col-lg-4">
+        <div>
+          <div class="card" style="width: 18rem;">
+            <a href="{{product.get_url}}">
+              <img class="my_image" src="{{ product.photo_main.url }}" alt="{{product.name}}">
+            </a>
+  
+            </a>
+            <div class="card-body">
+              <h4>{{product.name}}</h4>
+              <p class="card-text">
+                ${{product.price}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

@@ -1,4 +1,9 @@
+
 /* Category */
+
+.main-title {
+  margin-top: 40px;
+}
 
 .cat-banner {
   border: solid 1px lightgrey;
@@ -99,6 +104,18 @@
 
 .link-cart {
   color: rgb(0, 94, 255);
+}
+
+/* Search App */ 
+
+.my_search_text {
+  padding-top: 20px;
+}
+
+/* Paginator */
+
+.paginator {
+  margin: 20px;
 }
 
 @media (max-width: 991px) {

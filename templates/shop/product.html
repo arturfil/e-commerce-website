@@ -9,9 +9,9 @@
     <div>
       <p class="mx-auto breadcrum">
         <a href="{% url 'shop:allProductCategory' %}">Home</a> | 
-        <a href="{{ product.category.get_url">
-          {{product.category}} | {{product.name}}
-        </a>
+        <a href="{{ product.category.get_url }}">
+          {{product.category}} 
+        </a> | {{product.name}}
       </p>
     </div>
     <div>
@@ -29,9 +29,7 @@
             {% if prodcut.stock <= 0 %}
               <p><b>Out of Stock</b></p>
             {% else %}
-            <i class="fas fa-sign-in-alt"></i>
               <a href="" class="link-cart"><i class="fas fa-shopping-cart"></i> 
-                <i class="fas fa-sign-in-alt"></i>
                 Add to Cart</a>
             {% endif %}
           </div>
