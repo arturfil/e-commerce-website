@@ -7,7 +7,7 @@ def searchResult(request):
   query = None
   if 'q' in request.GET:
     query = request.GET.get('q')
-    products = Product.objects.all().filter(Q(name_contains=query) | Q(description__contains=query))
-  return render(request, 'search.html', {'query':query, 'products':products})
+    products = Product.objects.all().filter(Q(name__icontains=query) | Q(description__icontains=query))
+  return render(request, 'search/search.html', {'query':query, 'products':products})
 
 # Create your views here.
