@@ -29,7 +29,7 @@
             {% if prodcut.stock <= 0 %}
               <p><b>Out of Stock</b></p>
             {% else %}
-              <a href="{% url 'cart:add_cart' product.id %}" class="link-cart"><i class="fas fa-shopping-cart"></i> 
+              <a href="{% url 'cart:add_cart' product.id %}" class="link-cart my_custom_button btn btn-outline-success"><i class="fas fa-shopping-cart"></i> 
                 Add to Cart</a>
             {% endif %}
           </div>
