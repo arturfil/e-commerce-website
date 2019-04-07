@@ -113,6 +113,18 @@
           </tbody>
         </table>
         <div class="mx-auto">
+          <form action="" method="POST">
+            {% csrf_token %}
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="{{ data_key }}" data-amount="{{stripe_total}}" data-name="The Hemp Reserve"
+              data-description="{{ description }}" 
+              data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+              data-locale="auto"
+              data-shipping-address="true"
+              data-billing-address="true"
+              data-zip-code="true">
+              </script>
+          </form>
           <a href="{% url 'shop:allProductCategory' %}" class="btn btn-outline-success btn-block my_custom_button">
             Continue Shopping
           </a>
