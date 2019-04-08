@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}
+  Thanks - The Hemp Reserve
+{% endblock %}
+{% block content %}
+  <div>
+    <div class="">
+      <br>
+      <br>
+      <h1 class="text-center my_title">
+        Thanks for placing your order
+      </h1>
+      <br>
+      <br>
+      <div class="container text-center">
+        <p style="font-weight: 500; text-transform: capitalize;">Your order number is: <b>{{ customer_order.id }}</b></p>
+        <br>
+        <div class="container" style="width: 500px; text-align: left; margin-bottom: 20px;">
+          <p>
+            We have received your order and will begin processing right away.
+          
+            For your records, an email confirmation has been sent to you.
+          
+            This contains all the details of the item you just purchased
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

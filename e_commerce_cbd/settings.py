@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'stripe'
+    'stripe',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -141,3 +142,4 @@ MEDIA_URL = '/media/'
 # Stripe Commands
 STRIPE_PUBLISHABLE_KEY = 'pk_test_nuCrlciTxrzNBPXHtArKSvnC'
 STRIPE_SECRET_KEY = 'sk_test_KuORRCJSmQnyHojr9qZcU5rq'
+CRIPSY_TEMPLATE_PACK = 'bootstrap4'

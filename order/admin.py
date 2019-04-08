@@ -9,8 +9,9 @@ class OrderItemAdmin(admin.TabularInline):
     ('Price', {'fields': ['price']}),
   ]
   readonly_fields = ['product','quantity','price']
-  can_delete = False
+  can_delete= False
   max_num = 0
+  template = 'admin/order/tabular.html'
 
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
@@ -35,7 +36,7 @@ class OrderAdmin(admin.ModelAdmin):
     OrderItemAdmin,
   ]
 
-  def has_delte_permission(self,request,obj=None):
+  def has_delete_permission(self,request,obj=None):
     return False
 
   def has_add_permission(self,request):

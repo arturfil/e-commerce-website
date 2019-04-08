@@ -173,12 +173,14 @@
 
 .stripe-button-el:hover {
   background-color: rgb(82, 193, 141) !important; 
+  transition: .2s;
   color: white !important;
 }
 
 .stripe-button-el:hover span:hover {
   background-color: rgb(82, 193, 141) !important; 
   color: white !important;
+  transition: .2s;
 }
 
 /* Paginator */
@@ -187,7 +189,41 @@
   margin: 20px;
 }
 
+/* Form Box */
+
+.form-box {
+  color: rgb(77, 77, 77);
+  box-shadow: #f8f9fa;
+  border: solid 1px rgb(226, 223, 223);
+  height: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.form-box input {
+  border-color: aquamarine;
+  border-radius: 5px;
+}
+
+.controls {
+  width: 100% !important;
+}
+
+.textinput, .textInput{
+  width: 100% !important;
+}
+
+/* Errors List */
+
+.errorlist li {
+  color: red;
+  font-weight: bold;
+}
+
 @media (max-width: 991px) {
+  .form-box {
+    border-radius: 0;
+  }
   #showcase {
     padding-top: 4rem; }
     #showcase h1 {
@@ -196,6 +232,9 @@
     display: none; } }
 
 @media (max-width: 768px) {
+  .form-box {
+    border-radius: 0;
+  }
   #showcase {
     padding-top: 3rem; }
     #showcase h1 {
@@ -208,6 +247,9 @@
       text-align: center !important; } }
 
 @media (max-width: 576px) {
+  .form-box {
+    border-radius: 0;
+  }
   #showcase h1 {
     font-size: 30px; }
   #showcase-inner h1 {

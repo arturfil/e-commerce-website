@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block metadescription %}
+  Sign up to get a new account with us in The Hemp Reserve
+{% endblock %}
+{% block title %}
+  Create a New Account - The Hemp Reserve
+{% endblock %}
+{% block content %}
+  <div class="container form-box" style="margin: 0 auto">
+    <div class="row">
+      <div class="col-12">
+        {% if not form.is_valid %}
+        <div class="container mx-auto" style="">
+          <br>
+          <h1 class="my_title text-center">
+            Create a new account
+          </h1>
+          <br>
+          <div class="">
+            <br>
+            <p>Enter the following information to create a new account</p>
+            <form method="POST">
+              {% csrf_token %}
+              <p>{{ form | crispy }}</p>
+              <button class="btn btn-success">
+                Register Account
+              </button>
+            </form>
+            <br>
+        
+          </div>
+        </div>
+        {% else %}
+        <div class="mx-auto">
+          <br>
+          <h1 class="my_title text-center">
+            Your account was successfully created!
+          </h1>
+        </div>
+        <p>Dear customer,
+          <br>
+          <br>
+          Your account has been created and it is ready to use.
+          <br>
+          <a href="{% url 'shop:allProductCategory' %}">Continue Shopping</a>
+        </p>
+        {% endif %}
+      </div>
+    </div>
+    
+  </div>
+{% endblock %}
