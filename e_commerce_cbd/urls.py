@@ -12,5 +12,6 @@ urlpatterns = [
     path('cart/', include('cart.urls')),
     path('order/', include('order.urls')),
     path('account/create/', views.signUpView, name="signup"),
-    path('account/login/', views.signInView, name="signing"),
+    path('account/login/', views.signInView, name="signin"),
+    path('account/logout/', views.signOutView, name="signout"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -29,17 +29,28 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
     </form>
-    <ul class="navbar-nav auth">
-      <li class="nav-item auth" >
-        <div>
-          <p class="auth">Login</p>
-        </div>
-      </li>
-      <li class="auth">
-        <div>
-          <p class="auth">Sign Up</p>
-        </div>
-      </li>
+    <ul class="navbar-nav">
+      {% if request.user.is_authenticated and request.user.first_name %}
+        <li style="margin-left: 20px;">
+          Hi, {{ request.user.first_name }} <i class="fas fa-user-circle"></i>
+        </li>
+        <li style="margin-left: 20px;">
+          <a href="{% url 'signout' %}"> Logout <i class="fas fa-sign-out-alt"></i></a>
+        </li>
+      {% else %}
+        <li class="nav-item" >
+          <a class="nav-link" href="{% url 'signin' %}" id="navbarDropdown" role="button"
+            aria-haspopup="true" aria-expanded="false">
+            Login <i class="fas fa-user-circle"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="{% url 'signup' %}" id="navbarDropdown" role="button"
+            aria-haspopup="true" aria-expanded="false">
+            Sing Up <i class="fas fa-sign-out-alt"></i>
+          </a>
+        </li>
+      {% endif %}
     </ul>
   </div>
 </nav>
